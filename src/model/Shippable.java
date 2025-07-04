@@ -1,2 +1,6 @@
-package model;public class Shippable {
+package model;
+
+public interface Shippable {
+    public double getWeight();
+    public String getName();
 }

@@ -1,15 +1,35 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import Services.CheckoutService;
+import Services.ReceiptService;
+import Services.ShippingService;
+import model.*;
+
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        try {
+            PerishableShippableProduct cheese = new PerishableShippableProduct(
+                    "Cheese", 100, 10, 200, 3, LocalDate.now().plusDays(7));
+            ShippableProduct tv = new ShippableProduct("TV", 500, 5, 5000, 5);
+            Product scratchCard = new Product("Scratch Card", 50, 20);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+            Customer customer = new Customer("Kareem Ashraf", 781);
+
+            Cart cart = new Cart();
+            cart.addItem(new CartItem(cheese, 2));
+            cart.addItem(new CartItem(tv, 1));
+            cart.addItem(new CartItem(scratchCard, 1));
+
+            // Create services
+            ShippingService shippingService = new ShippingService(30);
+            ReceiptService receiptService = new ReceiptService();
+            CheckoutService checkoutService = new CheckoutService(shippingService, receiptService);
+
+            // Perform checkout
+            checkoutService.checkout(customer, cart);
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
 }

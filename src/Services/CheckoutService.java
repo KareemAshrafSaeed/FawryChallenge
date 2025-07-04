@@ -1,4 +1,33 @@
 package Services;
 
-public class Checkout {
+import Exceptions.InsufficientBalanceException;
+import model.Cart;
+import model.Customer;
+import model.Shippable;
+
+import java.util.Vector;
+import java.util.concurrent.CancellationException;
+
+public class CheckoutService {
+    ShippingService shippingService;
+    ReceiptService receiptService;
+    public CheckoutService(ShippingService shippingService, ReceiptService receiptService) {
+        this.shippingService = shippingService;
+        this.receiptService = receiptService;
+    }
+
+    public void checkout(Customer customer, Cart cart) {
+        if(customer.getBalance() - cart.getTotalPrice() - shippingService.getShippingPrice() < 0)
+            throw new InsufficientBalanceException("Balance is not sufficient");
+
+        if(cart.getItemsCount()<= 0)
+            throw new CancellationException("Cart is empty");
+
+        customer.setBalance(customer.getBalance() - cart.getTotalPrice() - shippingService.getShippingPrice());
+
+        if(!cart.getShippableItems().isEmpty())
+            shippingService.shipItems(cart.getShippableItems());
+        receiptService.printReceipt(customer, cart, shippingService);
+    }
+
 }
