@@ -5,7 +5,7 @@ import model.*;
 
 import java.time.LocalDate;
 
-public class NormalCheckout {
+public class Main {
     public static void main(String[] args) {
         try {
             PerishableShippableProduct cheese = new PerishableShippableProduct(

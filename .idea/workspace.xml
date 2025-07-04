@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7608c636-9711-4b0c-8f0a-e2b58208cd04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/EdgeCases.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EmptyCart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ExpiredProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/InsufficientStock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainInsufficientBalance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MixedProducts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NormalCheckout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NormalCheckout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,29 +35,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.EdgeCases.executor": "Run",
-    "Application.EmptyCart.executor": "Run",
-    "Application.ExpiredProduct.executor": "Run",
-    "Application.InsufficientStock.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.MainInsufficientBalance.executor": "Run",
-    "Application.MixedProducts.executor": "Run",
-    "Application.NormalCheckout.executor": "Run",
-    "Application.test1.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "F:/CUFE/Me/KareemU Resume/inter/Fawry/FawryChallenge/FawryChallenge/src/Main.java",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.appearance"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.EdgeCases.executor&quot;: &quot;Run&quot;,
+    &quot;Application.EmptyCart.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ExpiredProduct.executor&quot;: &quot;Run&quot;,
+    &quot;Application.InsufficientStock.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainInsufficientBalance.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MixedProducts.executor&quot;: &quot;Run&quot;,
+    &quot;Application.NormalCheckout.executor&quot;: &quot;Run&quot;,
+    &quot;Application.test1.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;F:/CUFE/Me/KareemU Resume/inter/Fawry/FawryChallenge/FawryChallenge/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
