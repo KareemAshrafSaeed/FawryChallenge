@@ -23,11 +23,13 @@ public class CheckoutService {
         if(cart.getItemsCount()<= 0)
             throw new CancellationException("Cart is empty");
 
-        customer.setBalance(customer.getBalance() - cart.getTotalPrice() - shippingService.getShippingPrice());
 
         if(!cart.getShippableItems().isEmpty())
             shippingService.shipItems(cart.getShippableItems());
-        receiptService.printReceipt(customer, cart, shippingService);
+        double shipping = cart.getShippableItems().isEmpty()?0:shippingService.getShippingPrice();
+        customer.setBalance(customer.getBalance() - cart.getTotalPrice() - shipping);
+        receiptService.printReceipt(customer, cart, shipping);
+
     }
 
 }

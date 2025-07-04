@@ -8,7 +8,7 @@ import model.Shippable;
 import java.util.Vector;
 
 public class ReceiptService {
-    public void printReceipt(Customer customer, Cart cart, ShippingService shippingService) {
+    public void printReceipt(Customer customer, Cart cart, double shipping) {
         System.out.print("** Checkout receipt ** \n");
         Vector<CartItem> items = cart.getItems();
         for(CartItem item: items) {
@@ -16,7 +16,6 @@ public class ReceiptService {
         }
         System.out.println("----------------------");
         double subtotal = cart.getTotalPrice();
-        double shipping = shippingService.getShippingPrice();
         System.out.println("Subtotal \t" + subtotal);
         System.out.println("Shipping \t" + shipping);
         System.out.println("Amount \t" + (shipping + subtotal));

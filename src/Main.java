@@ -13,7 +13,7 @@ public class Main {
             ShippableProduct tv = new ShippableProduct("TV", 500, 5, 5000, 5);
             Product scratchCard = new Product("Scratch Card", 50, 20);
 
-            Customer customer = new Customer("Kareem Ashraf", 781);
+            Customer customer = new Customer("Kareem Ashraf", 780);
 
             Cart cart = new Cart();
             cart.addItem(new CartItem(cheese, 2));
