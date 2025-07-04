@@ -14,7 +14,6 @@ public class Main {
             Product scratchCard = new Product("Scratch Card", 50, 20);
 
             Customer customer = new Customer("Kareem Ashraf", 780);
-
             Cart cart = new Cart();
             cart.addItem(new CartItem(cheese, 2));
             cart.addItem(new CartItem(tv, 1));

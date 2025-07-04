@@ -17,7 +17,9 @@ public class CheckoutService {
     }
 
     public void checkout(Customer customer, Cart cart) {
-        if(customer.getBalance() - cart.getTotalPrice() - shippingService.getShippingPrice() < 0)
+        double shipping = cart.getShippableItems().isEmpty()? 0: shippingService.getShippingPrice();
+
+        if(customer.getBalance() - cart.getTotalPrice() - shipping < 0)
             throw new InsufficientBalanceException("Balance is not sufficient");
 
         if(cart.getItemsCount()<= 0)
@@ -26,7 +28,6 @@ public class CheckoutService {
 
         if(!cart.getShippableItems().isEmpty())
             shippingService.shipItems(cart.getShippableItems());
-        double shipping = cart.getShippableItems().isEmpty()?0:shippingService.getShippingPrice();
         customer.setBalance(customer.getBalance() - cart.getTotalPrice() - shipping);
         receiptService.printReceipt(customer, cart, shipping);
 
