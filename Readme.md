@@ -19,3 +19,13 @@ This Java application implements an e-commerce system with product management, s
   - Expiration/stock validation
 - Shipping service integration
 - Receipt generation
+
+## Screenshots
+
+![Alt text](EdgeCases.PNG "Edge cases")
+![Alt text](NormalTestCase.PNG "Normal case")
+![Alt text](EmptyCartTestCase.PNG "Empty cart")
+![Alt text](InsufficientBalance.PNG "Insufficient balance")
+![Alt text](MixedProductsTestCase.PNG "Mixed products test case")
+![Alt text](ExpiredProductsTestCase.PNG "Expired products test case")
+![Alt text](InsufficientStockTestCase.PNG "Insufficient stock test case")
